@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="media numeri"/>
+        <attribute name="authors" value="ITS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-06 12:14:28 "/>
+        <attribute name="created" value="SVRTO0lUUy1QMDQ7MjAyNC0xMS0yOTsiMDE6MjA6MTQgIjsxODg5"/>
+        <attribute name="edited" value="SVRTO0lUUy1QMDQ7MjAyNC0xMi0wNjsiMTI6MTQ6MjggIjszOzIwMDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contatore" type="Integer" array="False" size=""/>
+            <assign variable="contatore" expression="0"/>
+            <declare name="input" type="Integer" array="False" size=""/>
+            <declare name="somma" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <assign variable="repeat" expression="&quot;si&quot;"/>
+            <declare name="numMax" type="Integer" array="False" size=""/>
+            <assign variable="numMax" expression="0"/>
+            <declare name="numMin" type="Integer" array="False" size=""/>
+            <while expression="repeat = &quot;si&quot;">
+                <output expression="&quot;Quale numero vuoi inserire?&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="contatore" expression="contatore+1"/>
+                <if expression="Contatore=1">
+                    <then>
+                        <assign variable="numMin" expression="input"/>
+                        <assign variable="numMax" expression="input"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numMin&gt;input">
+                    <then>
+                        <assign variable="numMin" expression="input"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numMax&lt;input">
+                    <then>
+                        <assign variable="numMax" expression="input"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="somma" expression="somma+input"/>
+                <output expression="&quot;Vuoi inserire altri numeri?&quot;" newline="True"/>
+                <input variable="repeat"/>
+            </while>
+            <output expression="&quot;La media dei numeri che hai inserito &#232; &quot; &amp; somma/contatore" newline="True"/>
+            <output expression="&quot;il numMax &#232; &quot; &amp; numMax &amp; &quot; il numero minimo &#232; &quot; &amp; numMin" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
