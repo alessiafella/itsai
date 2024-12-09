@@ -15,7 +15,7 @@
             <assign variable="contatore" expression="0"/>
             <declare name="input" type="Integer" array="False" size=""/>
             <declare name="somma" type="Integer" array="False" size=""/>
-            <assign variable="somma" expression="0"/>
+            <assign variable="somma" expression="2"/>
             <declare name="repeat" type="String" array="False" size=""/>
             <assign variable="repeat" expression="&quot;si&quot;"/>
             <declare name="numMax" type="Integer" array="False" size=""/>
